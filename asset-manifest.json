@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/oleksii.semko/static/css/main.5f361e03.chunk.css",
+    "main.js": "/oleksii.semko/static/js/main.85f8401e.chunk.js",
+    "main.js.map": "/oleksii.semko/static/js/main.85f8401e.chunk.js.map",
+    "runtime-main.js": "/oleksii.semko/static/js/runtime-main.285ffbc5.js",
+    "runtime-main.js.map": "/oleksii.semko/static/js/runtime-main.285ffbc5.js.map",
+    "static/js/2.cc042a38.chunk.js": "/oleksii.semko/static/js/2.cc042a38.chunk.js",
+    "static/js/2.cc042a38.chunk.js.map": "/oleksii.semko/static/js/2.cc042a38.chunk.js.map",
+    "index.html": "/oleksii.semko/index.html",
+    "precache-manifest.4856a2d1873aa8d77f1d5a526954af9b.js": "/oleksii.semko/precache-manifest.4856a2d1873aa8d77f1d5a526954af9b.js",
+    "service-worker.js": "/oleksii.semko/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/oleksii.semko/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.cc042a38.chunk.js.LICENSE.txt": "/oleksii.semko/static/js/2.cc042a38.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/oleksii.semko/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.285ffbc5.js",
+    "static/js/2.cc042a38.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.85f8401e.chunk.js"
+  ]
+}
