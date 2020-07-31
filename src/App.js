@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './components/Header'
-import LineSeparator from './components/LineSeparator'
+import Header from './components/Header';
+import LineSeparator from './components/LineSeparator';
 
 import './App.scss';
 
