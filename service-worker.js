@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/oleksii.semko/precache-manifest.4856a2d1873aa8d77f1d5a526954af9b.js"
+  "/oleksii.semko/precache-manifest.576fadb850c3f62bc782ca846d3e6a61.js"
 );
 
 self.addEventListener('message', (event) => {
