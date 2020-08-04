@@ -1,0 +1,29 @@
+header {
+    .intro {
+      display: flex;
+      justify-content: space-between;
+      line-height: 10vmin;
+
+      .photo {
+        height: 20vmin;
+        pointer-events: none;
+        border-radius: 10vmin;
+      }
+    }
+    address {
+        display: flex;
+        font-style: normal;
+
+        p {
+            span {
+                text-transform: uppercase;
+                width: 150px;
+                display: inline-block;
+            }
+        }
+
+        .left {
+          padding-right: 10%;
+        }
+    }
+}
