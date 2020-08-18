@@ -1,6 +1,7 @@
 import React from 'react';
-import Header from './components/Header';
-import LineSeparator from './components/LineSeparator';
+import Header from './containers/Header';
+import MainContent from './containers/MainContent';
+
 
 import './App.scss';
 
@@ -8,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <LineSeparator />
+      <MainContent />
     </div>
   );
 }

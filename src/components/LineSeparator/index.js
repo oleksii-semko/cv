@@ -17,7 +17,10 @@ const LineSeparator = ({ color, height, topGap, bottomGap }) => (
 );
 
 LineSeparator.propTypes = {
-    color: PropTypes.string
+    color: PropTypes.string,
+    height: PropTypes.string,
+    topGap: PropTypes.number,
+    bottomGap: PropTypes.number,
 }
 
 LineSeparator.defaultProps = {
