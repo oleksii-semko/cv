@@ -2,12 +2,26 @@ header {
     .intro {
       display: flex;
       justify-content: space-between;
-      line-height: 10vmin;
-
-      .photo {
+	  line-height: 10vmin;
+	  
+	  .photo {
         height: 20vmin;
         pointer-events: none;
         border-radius: 10vmin;
+      }
+
+      @media screen and (max-width: 767px) {
+		flex-direction: column;
+		h1, h2 {
+			align-self: center;
+		}
+
+        .photo {
+			height: 40vmin;
+			width: 40vmin;
+			align-self: center;
+			border-radius: 40vmin;
+        }
       }
     }
     address {

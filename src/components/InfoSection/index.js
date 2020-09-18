@@ -24,7 +24,7 @@ InfoSection.propTypes = {
 
 InfoSection.defaultProps = {
     title: '',
-    contentAlignment: 'row',
+    contentAlignment: 'horizontal',
     children: null
 }
 

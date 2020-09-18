@@ -2,15 +2,19 @@
     display: flex;
     line-height: 24px;
 
-    &.row {
+    &.horizontal {
         flex-direction: row;
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
 
         h2 {
             width: 250px;
         }
     }
 
-    &.column {
+    &.vertical {
         flex-direction: column;
     }
 }

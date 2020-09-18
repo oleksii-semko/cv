@@ -14,31 +14,32 @@ import './index.scss';
 class MainContent extends React.Component {
     renderEmploymentHistory() {
         const employment = getEmploymentHistory();
-        return employment.map(entry => {
+        const renderInFoBlockContent = (job, technoligies) => {
+            return <React.Fragment>
+                    {job && 
+                        <p>
+                            <span>JD: </span>{job}
+                        </p>
+                    }
+                    {technoligies && 
+                        <p>
+                            <span>Technologies: </span>{technoligies}
+                        </p>
+                    }
+                </React.Fragment>;
+        }
+
+        return employment.map((entry, i) => {
             const {city, company, jd, period, position, duration, tech} = entry;
-            const renderInFoBlockContent = (job, technoligies) => {
-                return (
-                    <React.Fragment>
-                        {job && 
-                            <p>
-                                <span>JD:</span>{job}
-                            </p>
-                        }
-                        {technoligies && 
-                            <p>
-                                <span>Technologies:</span>{technoligies}
-                            </p>
-                        }
-                    </React.Fragment>
-                );
-            }
+            let content = renderInFoBlockContent(jd, tech);
 
             return <InfoBlock 
                 title={position}
                 subTitle={`${company} (${duration})`}
                 period={period}
                 city={city}
-                content={renderInFoBlockContent(jd, tech)}
+                content={content}
+                key={i}
             />;
         });
     }
@@ -46,7 +47,7 @@ class MainContent extends React.Component {
     renderEducation() {
         const education = getEducationInfo();
 
-        return education.map(entry => {
+        return education.map((entry, i) => {
             const {institution, degree, city, period} = entry;
 
             return <InfoBlock 
@@ -54,6 +55,7 @@ class MainContent extends React.Component {
                 subTitle={degree}
                 period={period}
                 city={city}
+                key={i}
             />;
         });
     }
@@ -61,15 +63,20 @@ class MainContent extends React.Component {
     renderCources() {
         const cources = getCources();
 
-        return cources.map(entry => {
-            const {institution, cource, period} = entry;
-            console.log(entry);
+        return cources.map((entry, i ) => {
+            const {institution, course, period, proof} = entry;
+
             return <InfoBlock 
-                title={cource}
-                subTitle={institution}
-                period={period}
-                city={'Online'}
-            />;
+                    title={course}
+                    subTitle={institution}
+                    period={period}
+                    city={'Online'}
+                    key={i}
+                >
+                    <p className="proof">
+                        <a href={proof} target="_blank" rel="noopener noreferrer">Link</a> to proof completion
+                    </p>
+                </InfoBlock>;
         });
     }
 
@@ -82,24 +89,22 @@ class MainContent extends React.Component {
                     <p>{getProfileInfo()}</p>
                 </InfoSection>
                 <LineSeparator />
-                <InfoSection title="Employment History" contentAlignment="column">
+                <InfoSection title="Employment History" contentAlignment="vertical">
                     {this.renderEmploymentHistory()}
                 </InfoSection>
                 <LineSeparator />
-                <InfoSection title="Education" contentAlignment="column">
+                <InfoSection title="Education" contentAlignment="vertical">
                     {this.renderEducation()}
                 </InfoSection>
                 <LineSeparator />
-                <InfoSection title="Cources" contentAlignment="column">
+                <InfoSection title="Cources" contentAlignment="vertical">
                     {this.renderCources()}
                 </InfoSection>
                 <LineSeparator />
                 <InfoSection title="Languages">
-                    
-                </InfoSection>
-                <LineSeparator />
-                <InfoSection title="References">
-                    
+                    <p class="lang">Ukrainian</p>
+                    <p class="lang">English</p>
+                    <p class="lang">Russian</p>
                 </InfoSection>
             </React.Fragment>
         );
