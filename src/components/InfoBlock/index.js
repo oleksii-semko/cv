@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './index.scss';
 
 const InfoBlock = (props) => {
-    const {title, subTitle, period, city, content} = props;
+    const {title, subTitle, period, city, content, children} = props;
 
     return (
         <div className="info_block">
@@ -16,6 +16,7 @@ const InfoBlock = (props) => {
                 {title && <h3>{title}</h3>}
                 {subTitle && <h4>{subTitle}</h4>}
                 {content && <div className="content">{content}</div>}
+                {children}
             </div>
         </div>
     );
@@ -26,7 +27,8 @@ InfoBlock.propTypes = {
     subTitle: PropTypes.string,
     period: PropTypes.string,
     city: PropTypes.string,
-    content: PropTypes.string
+    content: PropTypes.any,
+    children: PropTypes.node
 }
 
 InfoBlock.defaultProps = {
@@ -34,7 +36,8 @@ InfoBlock.defaultProps = {
     subTitle: '',
     period: '',
     city: '',
-    content: ''
+    content: null,
+    children: null
 }
 
 export default InfoBlock;
