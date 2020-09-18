@@ -1,0 +1,17 @@
+.info_block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .additional_details {
+        min-width: 250px;
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+}
