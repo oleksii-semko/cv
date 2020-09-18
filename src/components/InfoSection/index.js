@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './index.scss';
+
 const InfoSection = (props) => {
     const {title, contentAlignment, children} = props;
 
     return (
         <section className={`info_section ${contentAlignment}`}>
-            {title && <h2>{title}</h2>}
+            {title &&
+                <h2>{title}</h2>
+            }
             {children && <React.Fragment>{children}</React.Fragment>}
         </section>
     );
@@ -20,7 +24,7 @@ InfoSection.propTypes = {
 
 InfoSection.defaultProps = {
     title: '',
-    contentAlignment: 'right',
+    contentAlignment: 'row',
     children: null
 }
 

@@ -1,0 +1,16 @@
+.info_section {
+    display: flex;
+    line-height: 24px;
+
+    &.row {
+        flex-direction: row;
+
+        h2 {
+            width: 250px;
+        }
+    }
+
+    &.column {
+        flex-direction: column;
+    }
+}

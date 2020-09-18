@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './index.scss';
+
 const InfoBlock = (props) => {
     const {title, subTitle, period, city, content} = props;
 

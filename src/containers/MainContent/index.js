@@ -82,15 +82,15 @@ class MainContent extends React.Component {
                     <p>{getProfileInfo()}</p>
                 </InfoSection>
                 <LineSeparator />
-                <InfoSection title="Employment History">
+                <InfoSection title="Employment History" contentAlignment="column">
                     {this.renderEmploymentHistory()}
                 </InfoSection>
                 <LineSeparator />
-                <InfoSection title="Education">
+                <InfoSection title="Education" contentAlignment="column">
                     {this.renderEducation()}
                 </InfoSection>
                 <LineSeparator />
-                <InfoSection title="Cources">
+                <InfoSection title="Cources" contentAlignment="column">
                     {this.renderCources()}
                 </InfoSection>
                 <LineSeparator />
