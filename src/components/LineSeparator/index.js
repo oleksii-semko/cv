@@ -3,18 +3,19 @@ import PropTypes from 'prop-types';
 
 import './index.scss';
 
+const LineSeparator = ({ color, height, topGap, bottomGap }) => {
+    let styles = [];
 
-const LineSeparator = ({ color, height, topGap, bottomGap }) => (
-    <hr
-        style={{
-            color: color,
-            backgroundColor: color,
-            height: height,
-            marginTop: topGap,
-            marginBottom: bottomGap
-        }}
-    />
-);
+    if (color) styles.push({color: color});
+    if (color) styles.push({backgroundColor: color});
+    if (height) styles.push({height: height});
+    if (topGap) styles.push({marginTop: topGap});
+    if (bottomGap) styles.push({marginBottom: bottomGap});
+
+    const composedStyles = styles.reduce((res, obj) => ({...res, ...obj}), {});
+
+    return <hr style={composedStyles} />;
+};
 
 LineSeparator.propTypes = {
     color: PropTypes.string,
@@ -24,10 +25,10 @@ LineSeparator.propTypes = {
 }
 
 LineSeparator.defaultProps = {
-    color: '#e4e4e4',
-    height: '1px',
-    topGap: 10,
-    bottomGap: 10
+    color: '',
+    height: '',
+    topGap: 0,
+    bottomGap: 0
 }
 
 export default LineSeparator;
